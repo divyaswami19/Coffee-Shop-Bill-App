@@ -1,0 +1,920 @@
+Java Code
+
+//Main Activity
+package com.example.miniproject;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+    EditText edittmainobj;
+    Button mainexitobj ,mainnextobj,btninsertobj,btnviewoobj;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mainexitobj=findViewById(R.id.mainexit);
+        mainnextobj=findViewById(R.id.mainnext);
+        edittmainobj=findViewById(R.id.edittmain);
+        btninsertobj=findViewById(R.id.btninsert);
+        btnviewoobj=findViewById(R.id.btnviewo);
+
+        mainnextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,menu.class);
+                startActivity(i);
+            }
+        });
+        mainexitobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+}
+
+//Menu Activity
+package com.example.miniproject;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class menu extends AppCompatActivity {
+    Button menubackobj,menunextobj,btnstarterobj,btnsandwichobj,btnpizzaobj,btnnoodlesobj,btnriceobj,
+            btnfriesobj,btnbeveragesobj,btnfjuiceobj,btncomboobj;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_menu);
+        menubackobj=findViewById(R.id.menuback);
+        menunextobj=findViewById(R.id.menunext);
+        btnstarterobj=findViewById(R.id.btnstarter);
+        btnsandwichobj=findViewById(R.id.btnsandwich);
+        btnpizzaobj=findViewById(R.id.btnpizza);
+        btnnoodlesobj=findViewById(R.id.btnnoodles);
+        btnriceobj=findViewById(R.id.btnrice);
+        btnfriesobj=findViewById(R.id.btnfries);
+        btnbeveragesobj=findViewById(R.id.btnbeverages);
+        btnfjuiceobj=findViewById(R.id.btnfjuice);
+        btncomboobj=findViewById(R.id.btncombo);
+
+        btnstarterobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent i1 =new Intent(menu.this,starters.class);
+               startActivity(i1);
+            }
+        });
+        btnsandwichobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2=new Intent(menu.this,sandwich.class);
+                startActivity(i2);
+            }
+        });
+        btnpizzaobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3=new Intent(menu.this,pizza.class);
+                startActivity(i3);
+            }
+        });
+        btnnoodlesobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i4=new Intent(menu.this,noodles.class);
+                startActivity(i4);
+            }
+        });
+        btnriceobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i5=new Intent(menu.this,rice.class);
+                startActivity(i5);
+            }
+        });
+        btnfriesobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i6=new Intent(menu.this,fries.class);
+                startActivity(i6);
+            }
+        });
+        btnbeveragesobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i7=new Intent(menu.this,beverages.class);
+                startActivity(i7);
+            }
+        });
+        btnfjuiceobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i8=new Intent(menu.this,fjuice.class);
+                startActivity(i8);
+            }
+        });
+        btncomboobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i9=new Intent(menu.this,combo.class);
+                startActivity(i9);
+            }
+        });
+
+        menubackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(menu.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
+        menunextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(menu.this,starters.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+//Starter Activity
+public class starters extends AppCompatActivity {
+Button starterbackobj , starternextobj,startertotalobj,startertomenuobj;
+CheckBox starter1obj,starter2obj,starter3obj,starter4obj,starter5obj,starter6obj,starter7obj,starter8obj,starter9obj,starter10obj;
+TextView txvstarterobj ;
+int startertotal ;
+public int maintotal;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_starters);
+        starterbackobj=findViewById(R.id.starterback);
+        starternextobj=findViewById(R.id.starternext);
+        startertotalobj=findViewById(R.id.startertotal);
+        startertomenuobj=findViewById(R.id.startertomenu);
+        starter1obj=findViewById(R.id.starter1);
+        starter2obj=findViewById(R.id.starter2);
+        starter3obj=findViewById(R.id.starter3);
+        starter4obj=findViewById(R.id.starter4);
+        starter5obj=findViewById(R.id.starter5);
+        starter6obj=findViewById(R.id.starter6);
+        starter7obj=findViewById(R.id.starter7);
+        starter8obj=findViewById(R.id.starter8);
+        starter9obj=findViewById(R.id.starter9);
+        starter10obj=findViewById(R.id.starter10);
+
+        txvstarterobj=findViewById(R.id.txvstarter);
+
+        starterbackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(starters.this,menu.class);
+                startActivity(i);
+            }
+        });
+
+        startertotalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startertotal=0;
+
+                if (starter1obj.isChecked()==true){
+                    startertotal=startertotal+100;
+                }
+                if (starter2obj.isChecked()==true){
+                    startertotal=startertotal+100;
+                }
+                if (starter3obj.isChecked()==true){
+                    startertotal=startertotal+100;
+                }
+                if (starter4obj.isChecked()==true){
+                    startertotal=startertotal+100;
+                }
+                if (starter5obj.isChecked()==true){
+                    startertotal=startertotal+120;
+                }
+                if (starter6obj.isChecked()==true){
+                    startertotal=startertotal+130;
+                }
+                if (starter7obj.isChecked()==true){
+                    startertotal=startertotal+100;
+                }
+                if (starter8obj.isChecked()==true){
+                    startertotal=startertotal+130;
+                }
+                if (starter9obj.isChecked()==true){
+                    startertotal=startertotal+130;
+                }
+                if (starter10obj.isChecked()==true){
+                    startertotal=startertotal+100;
+                }
+
+                txvstarterobj.setText("Your bill is :"+startertotal + "/- Rs");
+            }
+        });
+        starternextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sandwich sandobj=new sandwich();
+                sandobj.maintotal=startertotal+maintotal;
+                Intent i=new Intent(starters.this,sandwich.class);
+                startActivity(i);
+            }
+        });
+        startertomenuobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(starters.this,menu.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+//Sandwich Activity
+package com.example.miniproject;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
+
+public class sandwich extends AppCompatActivity {
+    Button sandwichbackobj,sandwichnextobj,sandwichtotalobj,sandwichtomenuibj;
+    CheckBox sandwich1obj,sandwich2obj,sandwich3obj,sandwich4obj,sandwich5obj,sandwich6obj,sandwich7obj,sandwich8obj,sandwich9obj,sandwich10obj;
+    TextView txvsandwichobj;
+    int sandwichtotal;
+    public int maintotal;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sandwich);
+        sandwichbackobj=findViewById(R.id.sandwichback);
+        sandwichnextobj=findViewById(R.id.sandwichnext);
+        sandwichtotalobj=findViewById(R.id.sandwichtotal);
+        sandwichtomenuibj=findViewById(R.id.sandwichtomenu);
+        sandwich1obj=findViewById(R.id.sandwich1);
+        sandwich2obj=findViewById(R.id.sandwich2);
+        sandwich3obj=findViewById(R.id.sandwich3);
+        sandwich4obj=findViewById(R.id.sandwich4);
+        sandwich5obj=findViewById(R.id.sandwich5);
+        sandwich6obj=findViewById(R.id.sandwich6);
+        sandwich7obj=findViewById(R.id.sandwich7);
+        sandwich8obj=findViewById(R.id.sandwich8);
+        sandwich9obj=findViewById(R.id.sandwich9);
+        sandwich10obj=findViewById(R.id.sandwich10);
+        txvsandwichobj=findViewById(R.id.txvsandwich);
+
+        sandwichbackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(sandwich.this,starters.class);
+                startActivity(i);
+            }
+        });
+        sandwichtotalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                sandwichtotal=0;
+
+                if (sandwich1obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+60;
+                }
+                if (sandwich2obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+70;
+                }
+                if (sandwich3obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+70;
+                }
+                if (sandwich4obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+80;
+                }
+                if (sandwich5obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+80;
+                }
+                if (sandwich6obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+80;
+                }
+                if (sandwich7obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+90;
+                }
+                if (sandwich8obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+100;
+                }
+                if (sandwich9obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+100;
+                }
+                if (sandwich10obj.isChecked()==true){
+                    sandwichtotal=sandwichtotal+100;
+                }
+
+                txvsandwichobj.setText("Your bill is :"+sandwichtotal + "/- Rs");
+            }
+        });
+        sandwichnextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pizza pizobj=new pizza();
+                pizobj.maintotal=sandwichtotal+maintotal;
+                Intent i=new Intent(sandwich.this,pizza.class);
+
+                startActivity(i);
+            }
+        });
+        sandwichtomenuibj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(sandwich.this,menu.class);
+                startActivity(i);
+            }
+        });
+
+    }
+}
+
+//Pizza Activity
+public class pizza extends AppCompatActivity {
+    Button pizzabackobj,pizzanextobj,pizzatotalobj,pizzatomenuobj;
+    CheckBox pizza1obj,pizza2obj,pizza3obj,pizza4obj,pizza5obj,pizza6obj,pizza7obj,pizza8obj,pizza9obj;
+    TextView txvpizzaobj;
+    int pizzatotal;
+    public int maintotal;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pizza);
+        pizzabackobj=findViewById(R.id.pizzaback);
+        pizzanextobj=findViewById(R.id.pizzanext);
+        pizzatotalobj=findViewById(R.id.pizzatotal);
+        pizzatomenuobj=findViewById(R.id.pizzatomenu);
+        pizza1obj=findViewById(R.id.pizza1);
+        pizza2obj=findViewById(R.id.pizza2);
+        pizza3obj=findViewById(R.id.pizza3);
+        pizza4obj=findViewById(R.id.pizza4);
+        pizza5obj=findViewById(R.id.pizza5);
+        pizza6obj=findViewById(R.id.pizza6);
+        pizza7obj=findViewById(R.id.pizza7);
+        pizza8obj=findViewById(R.id.pizza8);
+        pizza9obj=findViewById(R.id.pizza9);
+        txvpizzaobj=findViewById(R.id.txvpizza);
+
+        pizzatotalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                pizzatotal=0;
+
+                if (pizza1obj.isChecked()==true){
+                    pizzatotal=pizzatotal+140;
+                }
+                if (pizza2obj.isChecked()==true){
+                    pizzatotal=pizzatotal+180;
+                }
+                if (pizza3obj.isChecked()==true){
+                    pizzatotal=pizzatotal+150;
+                }
+                if (pizza4obj.isChecked()==true){
+                    pizzatotal=pizzatotal+200;
+                }
+                if (pizza5obj.isChecked()==true){
+                    pizzatotal=pizzatotal+180;
+                }
+                if (pizza6obj.isChecked()==true){
+                    pizzatotal=pizzatotal+220;
+                }
+                if (pizza7obj.isChecked()==true){
+                    pizzatotal=pizzatotal+250;
+                }
+                if (pizza8obj.isChecked()==true){
+                    pizzatotal=pizzatotal+270;
+                }
+                if (pizza9obj.isChecked()==true){
+                    pizzatotal=pizzatotal+280;
+                }
+                txvpizzaobj.setText("Your bill is :"+(pizzatotal) + "/- Rs");
+            }
+        });
+        pizzabackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(pizza.this,sandwich.class);
+                startActivity(i);
+            }
+        });
+
+        pizzanextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(pizza.this,noodles.class);
+                noodles nodobj=new noodles();
+                nodobj.maintotal=pizzatotal+maintotal;
+                startActivity(i);
+            }
+        });
+        pizzatomenuobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(pizza.this,menu.class);
+                startActivity(i);
+            }
+        });
+
+    }
+}
+
+//Noodles Activity
+public class noodles extends AppCompatActivity {
+Button noodlestotalobj,noodlesbackobj,noodlesnextobj,noodlestomenuobj;
+CheckBox noodles1obj,noodles2obj,noodles3obj,noodles4obj,noodles5obj,noodles6obj,noodles7obj,noodles8obj;
+TextView txvnoodlesobj;
+int noodlestotal;
+    public int maintotal;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_noodles);
+        noodlestotalobj=findViewById(R.id.noodlestotal);
+        noodlesbackobj=findViewById(R.id.noodlesback);
+        noodlesnextobj=findViewById(R.id.noodlesnext);
+        noodlestomenuobj=findViewById(R.id.noodlestomenu);
+        noodles1obj=findViewById(R.id.noodles1);
+        noodles2obj=findViewById(R.id.noodles2);
+        noodles3obj=findViewById(R.id.noodles3);
+        noodles4obj=findViewById(R.id.noodles4);
+        noodles5obj=findViewById(R.id.noodles5);
+        noodles6obj=findViewById(R.id.noodles6);
+        noodles7obj=findViewById(R.id.noodles7);
+        noodles8obj=findViewById(R.id.noodles8);
+        txvnoodlesobj=findViewById(R.id.txvnoodles);
+
+        noodlesbackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(noodles.this,pizza.class);
+                startActivity(i);
+            }
+        });
+        noodlestotalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                noodlestotal=0;
+                if (noodles1obj.isChecked()==true){
+                    noodlestotal=noodlestotal+100;
+                }
+                if (noodles2obj.isChecked()==true){
+                    noodlestotal=noodlestotal+100;
+                }
+                if (noodles3obj.isChecked()==true){
+                    noodlestotal=noodlestotal+130;
+                }
+                if (noodles4obj.isChecked()==true){
+                    noodlestotal=noodlestotal+120;
+                }
+                if (noodles5obj.isChecked()==true){
+                    noodlestotal=noodlestotal+120;
+                }
+                if (noodles6obj.isChecked()==true){
+                    noodlestotal=noodlestotal+120;
+                }
+                if (noodles7obj.isChecked()==true){
+                    noodlestotal=noodlestotal+120;
+                }
+                if (noodles8obj.isChecked()==true){
+                    noodlestotal=noodlestotal+150;
+                }
+                txvnoodlesobj.setText("Your bill is :"+(noodlestotal) + "/- Rs");
+            }
+        });
+        noodlesnextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(noodles.this,rice.class);
+                rice ricobj=new rice();
+                ricobj.maintotal=noodlestotal+maintotal;
+                startActivity(i);
+            }
+        });
+        noodlestomenuobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(noodles.this,menu.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+//Rice Activity
+public class rice extends AppCompatActivity {
+    Button ricetotalobj,ricebackobj,ricenextobj,ricetomenuobj;
+    CheckBox rice1obj,rice2obj,rice3obj,rice4obj,rice5obj,rice6obj,rice7obj,rice8obj;
+    TextView txvriceobj;
+    int ricetotal;
+    public int maintotal;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_rice);
+        ricetotalobj=findViewById(R.id.ricetotal);
+        ricebackobj=findViewById(R.id.riceback);
+        ricenextobj=findViewById(R.id.ricenext);
+        ricetomenuobj=findViewById(R.id.ricetomenu);
+        rice1obj=findViewById(R.id.rice1);
+        rice2obj=findViewById(R.id.rice2);
+        rice3obj=findViewById(R.id.rice3);
+        rice4obj=findViewById(R.id.rice4);
+        rice5obj=findViewById(R.id.rice5);
+        rice6obj=findViewById(R.id.rice6);
+        rice7obj=findViewById(R.id.rice7);
+        rice8obj=findViewById(R.id.rice8);
+        txvriceobj=findViewById(R.id.txvrice);
+
+        ricebackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(rice.this,noodles.class);
+                startActivity(i);
+            }
+        });
+        ricetotalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ricetotal=0;
+                if (rice1obj.isChecked()==true){
+                    ricetotal=ricetotal+100;
+                }
+                if (rice2obj.isChecked()==true){
+                    ricetotal=ricetotal+100;
+                }
+                if (rice3obj.isChecked()==true){
+                    ricetotal=ricetotal+130;
+                }
+                if (rice4obj.isChecked()==true){
+                    ricetotal=ricetotal+120;
+                }
+                if (rice5obj.isChecked()==true){
+                    ricetotal=ricetotal+120;
+                }
+                if (rice6obj.isChecked()==true){
+                    ricetotal=ricetotal+120;
+                }
+                if (rice7obj.isChecked()==true){
+                    ricetotal=ricetotal+120;
+                }
+                if (rice8obj.isChecked()==true){
+                    ricetotal=ricetotal+150;
+                }
+                txvriceobj.setText("Your bill is :"+(ricetotal) + "/- Rs");
+            }
+        });
+        ricenextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                 Intent i=new Intent(rice.this,fries.class);
+                fries friobj=new fries();
+                friobj.maintotal=ricetotal+maintotal;
+                 startActivity(i);
+            }
+        });
+        ricetomenuobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(rice.this,menu.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+//Fries Activity
+public class fries extends AppCompatActivity {
+    Button friestotalobj,friesbackobj,friesnextobj,friestomenuobj;
+    CheckBox fries1obj,fries2obj,fries3obj,fries4obj,fries5obj,fries6obj;
+    TextView txvfriesobj;
+    int friestotal;
+    public int maintotal;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fries);
+        friestotalobj=findViewById(R.id.friestotal);
+        friesbackobj=findViewById(R.id.friesback);
+        friesnextobj=findViewById(R.id.friesnext);
+        friestomenuobj=findViewById(R.id.friestomenu);
+        txvfriesobj=findViewById(R.id.txvfries);
+        fries1obj=findViewById(R.id.fries1);
+        fries2obj=findViewById(R.id.fries2);
+        fries3obj=findViewById(R.id.fries3);
+        fries4obj=findViewById(R.id.fries4);
+        fries5obj=findViewById(R.id.fries5);
+        fries6obj=findViewById(R.id.fries6);
+
+        friesbackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(fries.this,rice.class);
+                startActivity(i);
+            }
+        });
+        friestotalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                friestotal=0;
+                if (fries1obj.isChecked()==true){
+                    friestotal=friestotal+80;
+                }
+                if (fries2obj.isChecked()==true){
+                    friestotal=friestotal+90;
+                }
+                if (fries3obj.isChecked()==true){
+                    friestotal=friestotal+100;
+                }
+                if (fries4obj.isChecked()==true){
+                    friestotal=friestotal+100;
+                }
+                if (fries5obj.isChecked()==true){
+                    friestotal=friestotal+120;
+                }
+                if (fries6obj.isChecked()==true){
+                    friestotal=friestotal+120;
+                }
+                txvfriesobj.setText("Your bill is :"+(friestotal) + "/- Rs");
+            }
+        });
+        friesnextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(fries.this,beverages.class);
+                beverages bevobj=new beverages();
+                bevobj.maintotal=friestotal+maintotal;
+                startActivity(i);
+            }
+        });
+        friestomenuobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i  =new Intent(fries.this,menu.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+//Beverages Activity
+public class beverages extends AppCompatActivity {
+    Button drinktotalobj,drinkbackobj,drinknextobj,drinktomenuobj;
+    CheckBox drink1obj,drink2obj,drink3obj,drink4obj,drink5obj,drink6obj,drink7obj;
+    TextView txvdrinkobj;
+    int drinktotal;
+    public int maintotal;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_beverages);
+        drinktotalobj=findViewById(R.id.drinktotal);
+        drinkbackobj=findViewById(R.id.drinkback);
+        drinknextobj=findViewById(R.id.drinknext);
+        drinktomenuobj=findViewById(R.id.drinktomenu);
+        txvdrinkobj=findViewById(R.id.txvdrink);
+        drink1obj=findViewById(R.id.drink1);
+        drink2obj=findViewById(R.id.drink2);
+        drink3obj=findViewById(R.id.drink3);
+        drink4obj=findViewById(R.id.drink4);
+        drink5obj=findViewById(R.id.drink5);
+        drink6obj=findViewById(R.id.drink6);
+        drink7obj=findViewById(R.id.drink7);
+
+        drinkbackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(beverages.this,fries.class);
+                startActivity(i);
+            }
+        });
+        drinktotalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                drinktotal=0;
+                if (drink1obj.isChecked()==true){
+                    drinktotal=drinktotal+30;
+                }
+                if (drink2obj.isChecked()==true){
+                    drinktotal=drinktotal+70;
+                }
+                if (drink3obj.isChecked()==true){
+                    drinktotal=drinktotal+70;
+                }
+                if (drink4obj.isChecked()==true){
+                    drinktotal=drinktotal+80;
+                }
+                if (drink5obj.isChecked()==true){
+                    drinktotal=drinktotal+90;
+                }
+                if (drink6obj.isChecked()==true){
+                    drinktotal=drinktotal+100;
+                }
+                if (drink7obj.isChecked()==true){
+                    drinktotal=drinktotal+100;
+                }
+                txvdrinkobj.setText("Your bill is :"+drinktotal + "/- Rs");
+            }
+        });
+        drinknextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(beverages.this,fjuice.class);
+                fjuice fjuobj=new fjuice();
+                fjuobj.maintotal=drinktotal+maintotal;
+                startActivity(i);
+            }
+        });
+        drinktomenuobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(beverages.this,menu.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+//Fruit_Juice Activity
+public class fjuice extends AppCompatActivity {
+    Button juicetotalobj,juicebackobj,juicenextobj,juicetomenuobj;
+    CheckBox juice1obj,juice2obj,juice3obj,juice4obj,juice5obj,juice6obj,juice7obj;
+    TextView txvjuiceobj;
+    int juicetotal;
+    public int maintotal;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fjuice);
+        juicetotalobj=findViewById(R.id.juicetotal);
+        juicebackobj=findViewById(R.id.juiceback);
+        juicenextobj=findViewById(R.id.juicenext);
+        juicetomenuobj=findViewById(R.id.juicetomenu);
+        txvjuiceobj=findViewById(R.id.txvjuice);
+        juice1obj=findViewById(R.id.juice1);
+        juice2obj=findViewById(R.id.juice2);
+        juice3obj=findViewById(R.id.juice3);
+        juice4obj=findViewById(R.id.juice4);
+        juice5obj=findViewById(R.id.juice5);
+        juice6obj=findViewById(R.id.juice6);
+        juice7obj=findViewById(R.id.juice7);
+
+        juicebackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(fjuice.this,beverages.class);
+                startActivity(i);
+            }
+        });
+        juicetotalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                juicetotal=0;
+                if (juice1obj.isChecked()==true){
+                    juicetotal=juicetotal+60;
+                }
+                if (juice2obj.isChecked()==true){
+                    juicetotal=juicetotal+50;
+                }
+                if (juice3obj.isChecked()==true){
+                    juicetotal=juicetotal+50;
+                }
+                if (juice4obj.isChecked()==true){
+                    juicetotal=juicetotal+60;
+                }
+                if (juice5obj.isChecked()==true){
+                    juicetotal=juicetotal+60;
+                }
+                if (juice6obj.isChecked()==true){
+                    juicetotal=juicetotal+50;
+                }
+                if (juice7obj.isChecked()==true){
+                    juicetotal=juicetotal+60;
+                }
+                txvjuiceobj.setText("Your bill is :"+juicetotal + "/- Rs");
+            }
+        });
+        juicenextobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i =new Intent(fjuice.this,combo.class);
+                combo comobj=new combo();
+                comobj.maintotal=juicetotal+maintotal;
+                startActivity(i);
+            }
+        });
+        juicetomenuobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(fjuice.this,menu.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+//Combo Activity
+public class combo extends AppCompatActivity {
+    Button combototalobj,combobackobj,combotomenuobj;
+    CheckBox combo1obj,combo2obj,combo3obj,combo4obj,combo5obj,combo6obj;
+    TextView txvcomboobj;
+    int combototal;
+    public int maintotal;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_combo);
+        combototalobj=findViewById(R.id.combototal);
+        combobackobj=findViewById(R.id.comboback);
+        combotomenuobj=findViewById(R.id.combotomenu);
+        txvcomboobj=findViewById(R.id.txvcombo);
+        combo1obj=findViewById(R.id.combo1);
+        combo2obj=findViewById(R.id.combo2);
+        combo3obj=findViewById(R.id.combo3);
+        combo4obj=findViewById(R.id.combo4);
+        combo5obj=findViewById(R.id.combo5);
+        combo6obj=findViewById(R.id.combo6);
+
+        combobackobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(combo.this,fjuice.class);
+                startActivity(i);
+            }
+        });
+        combototalobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                combototal=0;
+                if (combo1obj.isChecked()==true){
+                    combototal=combototal+100;
+                }
+                if (combo2obj.isChecked()==true){
+                    combototal=combototal+180;
+                }
+                if (combo3obj.isChecked()==true){
+                    combototal=combototal+200;
+                }
+                if (combo4obj.isChecked()==true){
+                    combototal=combototal+200;
+                }
+                if (combo5obj.isChecked()==true){
+                    combototal=combototal+180;
+                }
+                if (combo6obj.isChecked()==true){
+                    combototal=combototal+240;
+                }
+                txvcomboobj.setText("Your bill is :"+combototal + "/- Rs");
+            }
+        });
+        combotomenuobj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(combo.this,menu.class);
+                startActivity(i);
+            }
+        });
+    }
+}

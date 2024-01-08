@@ -1,0 +1,1367 @@
+XML code
+
+//Main Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Table no :"
+        android:textColor="#F50C0C0C"
+        android:id="@+id/edittmain"
+        android:textSize="30dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total bill: :"
+        android:textColor="#F50C0C0C"
+        android:id="@+id/edittotal"
+        android:textSize="30dp"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="add records"
+        android:textSize="15dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="100dp"
+        android:id="@+id/btninsert"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="view orders"
+        android:textSize="15dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnviewo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text=" exit"
+        android:textSize="15dp"
+        android:layout_marginLeft="50dp"
+        android:background="#2396F1"
+        android:id="@+id/mainexit"/>
+        <Button
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text=" next"
+        android:textSize="15dp"
+        android:layout_marginLeft="100dp"
+            android:background="#2396F1"
+        android:id="@+id/mainnext"/>
+    </LinearLayout>
+</LinearLayout>
+
+//Menu Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/menu"
+    tools:context=".menu">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="        MENU"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Straters"
+        android:id="@+id/btnstarter"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Sandwich"
+        android:id="@+id/btnsandwich"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Pizza"
+        android:id="@+id/btnpizza"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Noodles"
+        android:id="@+id/btnnoodles"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Rice"
+        android:id="@+id/btnrice"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Fries"
+        android:id="@+id/btnfries"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Beverages"
+        android:id="@+id/btnbeverages"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Fruit Juice"
+        android:id="@+id/btnfjuice"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Combo"
+        android:id="@+id/btncombo"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:background="#2396F1"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/menuback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/menunext"
+            android:background="#2396F1"
+            android:layout_marginLeft="100dp"/>
+    </LinearLayout>
+</LinearLayout>
+
+//Starter Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/starter"
+    tools:context=".starters">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="      STARTERS"
+        android:textSize="40dp"
+        android:textColor="@color/black">
+    </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Manchurian  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Gobi 65  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Potato Chilly  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Paneer Chilly  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Paneer 65  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Paneer Crispy  (130/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter6"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Chinese Bhel  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter7"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Crispy  (130/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter8"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Cheese Puffs  (130/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter9"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Bread Rolls  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/starter10"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:id="@+id/startertotal"
+            android:background="#2396F1"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvstarter"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/starterback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:id="@+id/startertomenu"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/starternext"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+  </LinearLayout>
+</LinearLayout>
+
+//Sandwich Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sandwich"
+    tools:context=".sandwich">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="     SANDWICH"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Sandwich  (60/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Cheese Sandwich  (70/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Grill Sandwich  (70/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Cheese Grill Sandwich  (80/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Mayo Sandwich  (80/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Peri Peri Sandwich  (80/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich6"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Choclate  (90/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich7"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Bombay Sandwich  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich8"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Cheese Chilly Toast  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich9"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Cheese Garlic Toast  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/sandwich10"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:id="@+id/sandwichtotal"
+            android:background="#2396F1"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvsandwich"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/sandwichback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:id="@+id/sandwichtomenu"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/sandwichnext"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+</LinearLayout>
+</LinearLayout>
+
+//Pizza Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pizza"
+    tools:context=".pizza">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="        PIZZA"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veggie Pizza  (140/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Veg Cheese Pizza  (180/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Cheese Corn Pizza  (150/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Paneer Peri Peri Pizza  (200/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Margherita Pizza  (180/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Paneer Makhni Pizza  (220/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza6"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Pasta Pizza  (250/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza7"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Tandoori Paneer Pizza  (270/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza8"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Blazing Onion (280/-)"
+        android:textSize="20dp"
+        android:id="@+id/pizza9"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:id="@+id/pizzatotal"
+            android:background="#2396F1"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvpizza"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/pizzaback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:id="@+id/pizzatomenu"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/pizzanext"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+//Noodles Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/noodles"
+    tools:context=".noodles">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="      NOODLES"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Hakka Noodles  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/noodles1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Shezwan Noodles  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/noodles2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Manchurian Noodles  (130/-)"
+        android:textSize="20dp"
+        android:id="@+id/noodles3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Paneer Hakka Noodles  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/noodles4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Singapore Noodles  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/noodles5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Hongkong Noodles  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/noodles6"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Paneer Shezwan Noodles  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/noodles7"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Triple Noodles  (150/-)"
+        android:textSize="20dp"
+        android:id="@+id/noodles8"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:id="@+id/noodlestotal"
+            android:background="#2396F1"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvnoodles"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/noodlesback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:id="@+id/noodlestomenu"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/noodlesnext"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+//Rice Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rice"
+    tools:context=".rice">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="        RICE"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Fried Rice  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/rice1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Shezwan Rice  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/rice2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Manchurian Rice  (130/-)"
+        android:textSize="20dp"
+        android:id="@+id/rice3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Singapore Fried Rice  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/rice4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Hongkong Rice  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/rice5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Paneer Fried Rice  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/rice6"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Paneer Shezwan Rice  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/rice7"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Triple Rice  (150/-)"
+        android:textSize="20dp"
+        android:id="@+id/rice8"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:id="@+id/ricetotal"
+            android:background="#2396F1"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvrice"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/riceback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:id="@+id/ricetomenu"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/ricenext"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+//Fries Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fries"
+    tools:context=".fries">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="        FRIES"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="French Fries  (80/-)"
+        android:textSize="20dp"
+        android:id="@+id/fries1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Shezwan Fries  (90/-)"
+        android:textSize="20dp"
+        android:id="@+id/fries2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Mayo Fries  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/fries3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Green Chutney Fries  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/fries4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Peri Peri Fries  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/fries5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Masala Fries  (120/-)"
+        android:textSize="20dp"
+        android:id="@+id/fries6"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:id="@+id/friestotal"
+            android:background="#2396F1"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvfries"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/friesback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:id="@+id/friestomenu"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/friesnext"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+//Beverages Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/beverage"
+    tools:context=".beverages">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="     BEVERAGES"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Hot Coffee  (30/-)"
+        android:textSize="20dp"
+        android:id="@+id/drink1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Cold Coffee  (70/-)"
+        android:textSize="20dp"
+        android:id="@+id/drink2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Thick Cold Coffee  (70/-)"
+        android:textSize="20dp"
+        android:id="@+id/drink3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Oreo Coffee  (80/-)"
+        android:textSize="20dp"
+        android:id="@+id/drink4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Kitkat Coffee  (90/-)"
+        android:textSize="20dp"
+        android:id="@+id/drink5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Chocolate Shake  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/drink6"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Cadbury Cold Coffee  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/drink7"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:id="@+id/drinktotal"
+            android:background="#2396F1"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvdrink"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/drinkback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:id="@+id/drinktomenu"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/drinknext"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+//Fruit_Juice Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fruitjuice"
+    tools:context=".fjuice">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="    FRUIT JUICE"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Mosambi Juice  (60/-)"
+        android:textSize="20dp"
+        android:id="@+id/juice1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Pineapple Juice  (50/-)"
+        android:textSize="20dp"
+        android:id="@+id/juice2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Watermelon Juice  (50/-)"
+        android:textSize="20dp"
+        android:id="@+id/juice3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Apple Juice  (60/-)"
+        android:textSize="20dp"
+        android:id="@+id/juice4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Chikku Juice  (60/-)"
+        android:textSize="20dp"
+        android:id="@+id/juice5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Orange Juice  (50/-)"
+        android:textSize="20dp"
+        android:id="@+id/juice6"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Mix Fruit Juice  (60/-)"
+        android:textSize="20dp"
+        android:id="@+id/juice7"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:id="@+id/juicetotal"
+            android:background="#2396F1"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvjuice"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/juiceback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:id="@+id/juicetomenu"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="next"
+            android:textSize="15dp"
+            android:id="@+id/juicenext"
+            android:background="#2396F1"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+//Combo Activity
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/combo"
+    tools:context=".combo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="       COMBO"
+            android:textSize="40dp"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Maggi Combo  (100/-)"
+        android:textSize="20dp"
+        android:id="@+id/combo1"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cold Coffee + Veg Grill\n Sandwich + French Fries (180/-)"
+        android:textSize="20dp"
+        android:id="@+id/combo2"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hot Coffee + Hakka Noodles \n + Veg Manchurian  (200/-)"
+        android:textSize="20dp"
+        android:id="@+id/combo3"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hot Coffee + Fried Rice \n +Veg Manchurian (200/-)"
+        android:textSize="20dp"
+        android:id="@+id/combo4"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pasta Redsauce + \n Garlic Bread (180/-)"
+        android:textSize="20dp"
+        android:id="@+id/combo5"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pizza Combo (240/-)"
+        android:textSize="20dp"
+        android:id="@+id/combo6"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:text="TOTAL"
+            android:textSize="20dp"
+            android:background="#2396F1"
+            android:id="@+id/combototal"
+            android:layout_marginLeft="135dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:id="@+id/txvcombo"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="back"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/comboback"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="menu"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:background="#2396F1"
+            android:id="@+id/combotomenu"/>
+
+    </LinearLayout>
+
+</LinearLayout>
